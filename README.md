@@ -77,6 +77,13 @@ design-pattern-learning
 
 7.代理模式(通过代理对象访问目标对象,扩展目标对象的功能)
   分类: 静态代理、动态代理(jdk代理,接口代理)和Cglib代理
+  使用场景: 静态代理(类似于装饰器模式);
+           动态代理(基于接口实现的代理,代理对象不需要实现接口,被代理对象需要实现接口,借助Proxy类的newProxyInstance方法);
+           Cglib代理(基于子类实现的代理,底层原理是通过字节码处理框架ASM来转换字节码,生成新的类);
+  Cglib使用步骤: 1.1 引入ASM框架相关依赖包 asm.jar、asm-commons.jar、asm-tree.jar、cglib-2.2.jar
+                1.2 在内存中动态的创建子类(不能为final,否则会包IllegalArgumentException)
+                1.3 不会执行目标对象额外的业务方法(final/static修饰)  
+  几种常见的代理模式变种: 防火墙代理; 缓存代理; 远程代理; 同步代理                    
 
 3)11种行为型模式
 
