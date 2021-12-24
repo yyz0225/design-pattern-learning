@@ -40,7 +40,7 @@ public class CglibProxyFactory /*implements MethodInterceptor*/{
      * @throws Throwable
      */
     //@Override
-    public Object intercept(Object proxy, Method method, Object[] args)throws Throwable{
+    public Object intercept(Object proxy, Method method, Object[] args/*, MethodProxy arg3*/)throws Throwable{
         System.out.println("Cglib代理开始..");
         // 反射调用目标方法
         Object object = method.invoke(target,args);

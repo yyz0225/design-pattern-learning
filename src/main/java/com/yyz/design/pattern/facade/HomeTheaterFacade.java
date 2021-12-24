@@ -47,7 +47,7 @@ public class HomeTheaterFacade {
         dvdPlayer = DVDPlayer.getInstance();
     }
 
-    public void read(){
+    public void ready(){
         popcorn.on();
         popcorn.pop();
         screen.down();
