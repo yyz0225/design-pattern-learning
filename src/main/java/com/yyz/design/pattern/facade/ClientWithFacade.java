@@ -12,7 +12,7 @@ public class ClientWithFacade {
         HomeTheaterFacade homeTheaterFacade = new HomeTheaterFacade();
         homeTheaterFacade.ready();
         homeTheaterFacade.play();
-        // homeTheaterFacade.pause();
+        /// homeTheaterFacade.pause();
         homeTheaterFacade.end();
     }
 }

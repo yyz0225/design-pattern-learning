@@ -14,6 +14,8 @@ public class BJOrderPizzaFactory extends AbstractOrderPizzaFactory {
             pizza = new BJCheesePizza("北京奶酪披萨");
         }else if("pepper".equals(orderType)){
             pizza = new BJPepperPizza("北京胡椒披萨");
+        }else {
+            throw new RuntimeException("未定义类型");
         }
         return pizza;
     }

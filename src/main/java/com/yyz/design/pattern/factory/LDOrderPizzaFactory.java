@@ -14,6 +14,8 @@ public class LDOrderPizzaFactory extends AbstractOrderPizzaFactory {
             pizza = new LDCheesePizza("伦敦奶酪披萨");
         }else if("pepper".equals(orderType)){
             pizza = new LDPepperPizza("伦敦胡椒披萨");
+        }else {
+            throw new RuntimeException("未定义类型");
         }
         return pizza;
     }

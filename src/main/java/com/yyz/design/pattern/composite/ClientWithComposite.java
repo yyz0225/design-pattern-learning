@@ -9,7 +9,7 @@ public class ClientWithComposite {
 
     public static void main(String[] args) {
         // 从大到小创建对象
-        // 创建大学
+        // 创建大学=
         AbstractOrganizationComponent universityQH = new University("清华大学","中国顶尖大学");
         AbstractOrganizationComponent universityBJ = new University("北京大学","中国顶尖大学");
 

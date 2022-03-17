@@ -12,7 +12,14 @@ public class TeacherDaoStaticProxy implements ITeacherDao {
     private ITeacherDao iTeacherDao;
 
     public TeacherDaoStaticProxy(ITeacherDao iTeacherDao) {
+        // 聚合的方式,就是装饰器模式
         this.iTeacherDao = iTeacherDao;
+    }
+
+
+    public TeacherDaoStaticProxy() {
+        // 代理对象中直接创建被代理对象的实例,采用的是组合的方式.就是静态代理模式
+        this.iTeacherDao = new TeachDao();
     }
 
     @Override

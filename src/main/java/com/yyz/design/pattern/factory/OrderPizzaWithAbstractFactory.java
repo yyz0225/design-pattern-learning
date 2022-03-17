@@ -24,6 +24,7 @@ public class OrderPizzaWithAbstractFactory {
         do{
             orderType = getType();
             pizza = this.iOrderPizza.createPizza(orderType);
+            System.out.println(pizza.getName());
 
             // 输出披萨制作过程
             pizza.prepare();

@@ -24,7 +24,7 @@ public abstract class AbstractOrderPizzaFactory {
         do{
             orderType = getType();
             pizza = createPizza(orderType);
-
+            System.out.println(pizza.getName());
             // 输出披萨制作过程
             pizza.prepare();
             pizza.bake();

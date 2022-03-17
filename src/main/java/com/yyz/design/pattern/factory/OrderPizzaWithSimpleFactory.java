@@ -24,6 +24,7 @@ public class OrderPizzaWithSimpleFactory {
         do{
             orderType = getType();
             pizza = this.simpleFactory.createPizza(orderType);
+            System.out.println(pizza.getName());
 
             // 输出披萨制作过程
             pizza.prepare();
