@@ -5,12 +5,14 @@ package com.yyz.design.pattern.command;
  * @Author: yyz
  * @Date: 2021/12/21 16:07
  */
-public class LightReceiver {
+public class LightReceiver implements IReceiver{
 
+    @Override
     public void on(){
         System.out.println("电灯打开了....");
     }
 
+    @Override
     public void off(){
         System.out.println("电灯关闭了....");
     }

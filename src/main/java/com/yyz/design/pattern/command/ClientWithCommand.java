@@ -9,7 +9,7 @@ public class ClientWithCommand {
 
     public static void main(String[] args) {
         // 创建指定接收者
-        LightReceiver lightReceiver = new LightReceiver();
+        IReceiver lightReceiver = new LightReceiver();
         // 创建电灯相关的开关命令
         LightOnCommand lightOnCommand = new LightOnCommand(lightReceiver);
         LightOffCommand lightOffCommand = new LightOffCommand(lightReceiver);
@@ -24,7 +24,7 @@ public class ClientWithCommand {
         remoteController.undoButtonWasPushed();
 
         // 创建电视接收者
-        TVReceiver tvReceiver = new TVReceiver();
+        IReceiver tvReceiver = new TVReceiver();
         // 创建电视开关命令
         ICommand tvOnCommand = new TVOnCommand(tvReceiver);
         ICommand tvOffCommand = new TVOffCommand(tvReceiver);

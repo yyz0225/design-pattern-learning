@@ -7,9 +7,9 @@ package com.yyz.design.pattern.command;
  */
 public class LightOffCommand implements ICommand {
 
-    private LightReceiver light;
+    private IReceiver light;
 
-    public LightOffCommand(LightReceiver light) {
+    public LightOffCommand(IReceiver light) {
         super();
         this.light = light;
     }

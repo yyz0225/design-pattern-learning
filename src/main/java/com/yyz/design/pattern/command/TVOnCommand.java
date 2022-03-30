@@ -7,9 +7,9 @@ package com.yyz.design.pattern.command;
  */
 public class TVOnCommand implements ICommand{
 
-    private TVReceiver receiver;
+    private IReceiver receiver;
 
-    public TVOnCommand(TVReceiver receiver) {
+    public TVOnCommand(IReceiver receiver) {
         super();
         this.receiver = receiver;
     }

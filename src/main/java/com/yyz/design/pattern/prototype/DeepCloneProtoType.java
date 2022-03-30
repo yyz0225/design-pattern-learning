@@ -51,10 +51,10 @@ public class DeepCloneProtoType implements Serializable, Cloneable {
             out.writeObject(this);
 
             // 反序列化 底层字节数组流还原成java对象
-            ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
-            ObjectInputStream input = new ObjectInputStream(bis);
-            return input.readObject();
-
+            try( ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+                 ObjectInputStream input = new ObjectInputStream(bis);){
+                return input.readObject();
+            }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
