@@ -12,7 +12,9 @@ public abstract class AbstractSoyaMilk {
      */
     public final void make(){
         select();
-        addCondiments();
+        if (customerWantCondiments()) {
+            addCondiments();
+        }
         soak();
         beat();
     }
@@ -43,6 +45,13 @@ public abstract class AbstractSoyaMilk {
         System.out.println("第四步: 将黄豆和配料放到豆浆机里打碎....");
     }
 
+    /**
+     * 钩子方法,决定是否需要添加配料(子类根据情况覆盖)
+     * @return boolean
+     */
+    boolean customerWantCondiments(){
+        return true;
+    }
 
 
 
