@@ -119,6 +119,10 @@ design-pattern-learning
  包含对象: 迭代器接口,具体迭代器,聚合接口,具体聚合类(依赖唯一迭代器),共同输出对象(OutPutImpl)
 
 5.观察者模式
+  原理: 对象之间多对一依赖的一种设计方案,被依赖的对象为Subject,依赖的对象为Observer,Subject通知Observer变化
+  角色职责: Subject: 主题 --> 观察者注册,移除,推送观察者或者观察者获取数据来源
+           Observer 观察者 --> 接收输入
+  应用场景: 用户订牛奶(奶站Subject,用户Observer)、第三方网站订阅气象站天气(气象站Subject,第三方网站Observer)
 
 6.中介模式
 
