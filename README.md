@@ -124,7 +124,9 @@ design-pattern-learning
            Observer 观察者 --> 接收输入
   应用场景: 用户订牛奶(奶站Subject,用户Observer)、第三方网站订阅气象站天气(气象站Subject,第三方网站Observer)
 
-6.中介模式
+6.中介者模式
+  原理: 用一个中介对象来封装一系列对象的交互.中介者使各个对象之间不需要显示的相互引用,从而使其耦合松散,并且可以改变对象间的交互.
+  角色: Mediator 抽象中介者,ConcreteMediator 具体中介者,Colleague 抽象同事类,ConcreteColleague 具体同事类(都依赖于中介者)
 
 7.备忘录模式
 

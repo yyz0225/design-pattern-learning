@@ -1,7 +1,7 @@
 package com.yyz.design.pattern.composite;
 
 /**
- * 专业 是非叶子节点,没有子节点
+ * 专业 是叶子节点,没有子节点
  * @Author: yyz
  * @Date: 2021/12/14 15:00
  */
