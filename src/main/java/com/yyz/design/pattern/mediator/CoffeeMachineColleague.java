@@ -17,10 +17,9 @@ public class CoffeeMachineColleague extends AbstractColleague{
     public void sendMessage(int stateChange) {
         // 调用中介者对象的getMessage
         this.getMediator().getMessage(stateChange,this.name);
-
     }
 
-    public void finishCoffee(int stateChange){
+    public void finishCoffee(){
         System.out.println("After five minutes!");
         System.out.println("Coffee is OK!");
         sendMessage(0);

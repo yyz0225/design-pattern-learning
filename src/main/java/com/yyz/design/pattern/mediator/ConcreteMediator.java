@@ -3,14 +3,19 @@ package com.yyz.design.pattern.mediator;
 import java.util.HashMap;
 
 /**
+ * 具体中介者对象 负责协调各个同事类之间的关系调用
  * @Author: yyz
  * @Date: 2022/5/5 12:42
  */
 public class ConcreteMediator  extends Mediator{
 
-    // 同事对象map
+    /**
+     * 同事对象map
+     */
     private HashMap<String,AbstractColleague> colleagueHashMap;
-    // 同事对象map value是同事对象名称
+    /**
+     * 同事对象map value是同事对象名称
+     */
     private HashMap<String,String> interMap;
 
     public ConcreteMediator() {
@@ -21,18 +26,25 @@ public class ConcreteMediator  extends Mediator{
     @Override
     void register(String colleagueName, AbstractColleague colleague) {
         colleagueHashMap.put(colleagueName,colleague);
-
         if (colleague instanceof AlarmColleague) {
             interMap.put("Alarm",colleagueName);
         }else if(colleague instanceof CoffeeMachineColleague){
             interMap.put("CoffeeMachine",colleagueName);
+        }else if(colleague instanceof TV){
+            interMap.put("TV",colleagueName);
+        }else if(colleague instanceof Curtains){
+            interMap.put("Curtains",colleagueName);
         }
     }
 
 
-    // 具体中介者核心方法
-    // 1.根据得到消息,完成响应任务
-    // 2.中介者在这个方法,协调各个具体的同事对象,完成任务
+    /**
+     * 具体中介者核心方法
+     * 1.根据得到消息,完成响应任务
+     * 2.中介者在这个方法,协调各个具体的同事对象,完成任务
+     * @param stateChange 状态改变
+     * @param colleagueName 同事类名称
+     */
     @Override
     void getMessage(int stateChange, String colleagueName) {
         if (colleagueHashMap.get(colleagueName) instanceof AlarmColleague) {
